@@ -19,7 +19,7 @@ export class ReservationsController {
 
   @UseGuards(JwtAuthGuard)
   @Post()
-  async create(
+  create(
     @Body() createReservationDto: CreateReservationDto,
     @currentUser() user: UserDto,
   ) {
